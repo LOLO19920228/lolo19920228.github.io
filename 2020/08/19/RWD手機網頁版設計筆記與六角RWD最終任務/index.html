@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言紀錄RWD網頁版設計的筆記以及六角RWD課程的最終任務與助教建議。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-08-19T08:30:00.000Z">
-<meta property="article:modified_time" content="2020-08-19T06:37:39.096Z">
+<meta property="article:modified_time" content="2020-09-08T11:31:33.093Z">
 <meta property="article:author" content="Tim Chou">
 <meta property="article:tag" content="FrontEnd">
 <meta property="article:tag" content="RWD">
@@ -175,10 +175,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-19 16:30:00 / Modified: 14:37:39" itemprop="dateCreated datePublished" datetime="2020-08-19T16:30:00+08:00">2020-08-19</time>
+              <time title="Created: 2020-08-19 16:30:00" itemprop="dateCreated datePublished" datetime="2020-08-19T16:30:00+08:00">2020-08-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-08 19:31:33" itemprop="dateModified" datetime="2020-09-08T19:31:33+08:00">2020-09-08</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -204,7 +210,9 @@
 <a id="more"></a>
 <h2 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h2><h3 id="width-device-width"><a href="#width-device-width" class="headerlink" title="width=device-width"></a>width=device-width</h3><p>有些教學文章上面會寫成 width=320 就是將手機瀏覽器的螢幕解析度設定為 320px，這個大小在 iPhone 就是 他的 viewport 預設值，所以在 iPhone 上面看起來就是剛剛好的，但是，這 2 年來手機螢幕越做越大，有些手機螢幕做到 4 吋以上，甚至有些還做到 5 吋以上，手機螢幕變大了，他們的 viewport 預設值也就會大於 320px ，由於手機的品牌太多了，我們的網頁沒辦法為每一台手機都設定成不同的 viewport ，因此，我們就只要設定為 width=device-width 就可以自動符合所有不同手機螢幕他們自己的預設最佳解析度。</p>
 <h3 id="initial-scale-1"><a href="#initial-scale-1" class="headerlink" title="initial-scale=1"></a>initial-scale=1</h3><p>設定手機螢幕畫面的初始縮放比例為 100%。</p>
-
+<h3 id="斷點時機"><a href="#斷點時機" class="headerlink" title="斷點時機"></a>斷點時機</h3><p>中文內文單行字元 30～40 會比較好閱讀，英文則是 32～80 個字元數。</p>
+<h3 id="點擊範圍"><a href="#點擊範圍" class="headerlink" title="點擊範圍"></a>點擊範圍</h3><p>手指點擊範圍大約44px。</p>
+<h3 id="斷點懶人包"><a href="#斷點懶人包" class="headerlink" title="斷點懶人包"></a>斷點懶人包</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*桌機樣式*/</span></span><br><span class="line">@media(max-width: 1199px)&#123;</span><br><span class="line"> <span class="comment">/*平板樣式*/</span></span><br><span class="line">&#125;</span><br><span class="line">@media(max-width: 768px)&#123;</span><br><span class="line"> <span class="comment">/*手機樣式*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -285,7 +293,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筆記"><span class="nav-number">2.</span> <span class="nav-text">筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#width-device-width"><span class="nav-number">2.1.</span> <span class="nav-text">width&#x3D;device-width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-scale-1"><span class="nav-number">2.2.</span> <span class="nav-text">initial-scale&#x3D;1</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筆記"><span class="nav-number">2.</span> <span class="nav-text">筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#width-device-width"><span class="nav-number">2.1.</span> <span class="nav-text">width&#x3D;device-width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-scale-1"><span class="nav-number">2.2.</span> <span class="nav-text">initial-scale&#x3D;1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斷點時機"><span class="nav-number">2.3.</span> <span class="nav-text">斷點時機</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#點擊範圍"><span class="nav-number">2.4.</span> <span class="nav-text">點擊範圍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斷點懶人包"><span class="nav-number">2.5.</span> <span class="nav-text">斷點懶人包</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
