@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言紀錄JavaScript入門篇的筆記。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-10-21T03:30:00.000Z">
-<meta property="article:modified_time" content="2020-10-29T09:30:58.266Z">
+<meta property="article:modified_time" content="2020-10-29T10:24:13.110Z">
 <meta property="article:author" content="Tim Chou">
 <meta property="article:tag" content="FrontEnd">
 <meta property="article:tag" content="JavaScript">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-29 17:30:58" itemprop="dateModified" datetime="2020-10-29T17:30:58+08:00">2020-10-29</time>
+                <time title="Modified: 2020-10-29 18:24:13" itemprop="dateModified" datetime="2020-10-29T18:24:13+08:00">2020-10-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,7 +216,12 @@
 <li>大小寫有分</li>
 <li>盡量語意化</li>
 </ol>
-<h3 id="函示function"><a href="#函示function" class="headerlink" title="函示function"></a>函示function</h3>
+<h3 id="函示function"><a href="#函示function" class="headerlink" title="函示function"></a>函示function</h3><h4 id="函示的寫法"><a href="#函示的寫法" class="headerlink" title="函示的寫法"></a>函示的寫法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//宣告函示</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"測試"</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//執行函示</span></span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<h4 id="帶參數之範例"><a href="#帶參數之範例" class="headerlink" title="帶參數之範例"></a>帶參數之範例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params">oneNum,twoNum</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> total = (oneNum * <span class="number">5</span>) + (twoNum * <span class="number">2</span>) + <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"總數等於："</span> + total);</span><br><span class="line">&#125;</span><br><span class="line">count(<span class="number">20</span>,<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="全域變數與區域變數"><a href="#全域變數與區域變數" class="headerlink" title="全域變數與區域變數"></a>全域變數與區域變數</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ex1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params">oneNum,twoNum</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> total = (oneNum * <span class="number">5</span>) + (twoNum * <span class="number">2</span>) + <span class="number">20</span>;<span class="comment">//區域變數</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"總數等於："</span> + total);</span><br><span class="line">&#125;</span><br><span class="line">count(<span class="number">20</span>,<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(total);<span class="comment">//Uncaught ReferenceError: total is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ex2</span></span><br><span class="line"><span class="keyword">var</span> total<span class="comment">//全域變數</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params">oneNum,twoNum</span>)</span>&#123;</span><br><span class="line">    total = (oneNum * <span class="number">5</span>) + (twoNum * <span class="number">2</span>) + <span class="number">20</span>;<span class="comment">//區域變數</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"總數等於："</span> + total);</span><br><span class="line">&#125;</span><br><span class="line">count(<span class="number">20</span>,<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(total);<span class="comment">//160</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ex3 var與let的差別</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varTest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">2</span>;  <span class="comment">// 這裡的 x 與 function 區塊內部的 x 是一樣的，因此會影響 function 區塊內所有的 x</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">letTest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="number">1</span>; </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="number">2</span>;  <span class="comment">// 這裡的 x 與 function 區塊內部的 x 是不同的，只會作用在這層 block 區塊中</span></span><br><span class="line">    <span class="built_in">console</span>.log(x);  <span class="comment">// 2</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(x);  <span class="comment">// 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
     </div>
 
     
@@ -238,7 +243,10 @@
     <a href="/2020/09/18/005-Bootstrap4%E7%AD%86%E8%A8%98/" rel="prev" title="Bootstrap4筆記">
       <i class="fa fa-chevron-left"></i> Bootstrap4筆記
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/29/007-%E5%85%AD%E8%A7%92%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88%E7%9B%B4%E6%92%AD%E7%8F%AD(week1)/" rel="next" title="六角網頁切版直播班(week1)">
+      六角網頁切版直播班(week1) <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -297,7 +305,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筆記"><span class="nav-number">2.</span> <span class="nav-text">筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#變數variable"><span class="nav-number">2.1.</span> <span class="nav-text">變數variable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#變數命名規則"><span class="nav-number">2.1.1.</span> <span class="nav-text">變數命名規則</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函示function"><span class="nav-number">2.2.</span> <span class="nav-text">函示function</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筆記"><span class="nav-number">2.</span> <span class="nav-text">筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#變數variable"><span class="nav-number">2.1.</span> <span class="nav-text">變數variable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#變數命名規則"><span class="nav-number">2.1.1.</span> <span class="nav-text">變數命名規則</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函示function"><span class="nav-number">2.2.</span> <span class="nav-text">函示function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函示的寫法"><span class="nav-number">2.2.1.</span> <span class="nav-text">函示的寫法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帶參數之範例"><span class="nav-number">2.2.2.</span> <span class="nav-text">帶參數之範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全域變數與區域變數"><span class="nav-number">2.2.3.</span> <span class="nav-text">全域變數與區域變數</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -311,7 +319,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
