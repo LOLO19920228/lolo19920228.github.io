@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lolo19920228.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言紀錄六角網頁JS直播班課前預習筆記">
+<meta property="og:type" content="article">
+<meta property="og:title" content="六角JS直播班課前預習筆記">
+<meta property="og:url" content="https://lolo19920228.github.io/2021/02/19/007-%E5%85%AD%E8%A7%92JS%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92/index.html">
+<meta property="og:site_name" content="Tim&#39;s Blog">
+<meta property="og:description" content="前言紀錄六角網頁JS直播班課前預習筆記">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-02-19T07:30:00.000Z">
+<meta property="article:modified_time" content="2021-04-18T16:00:39.000Z">
+<meta property="article:author" content="Tim Chou">
+<meta property="article:tag" content="FrontEnd">
+<meta property="article:tag" content="liveCourse-JavaScript">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lolo19920228.github.io/2021/02/19/007-%E5%85%AD%E8%A7%92JS%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-tw'
+  };
+</script>
+
+  <title>六角JS直播班課前預習筆記 | Tim's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tim's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tim's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep on going never give up.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="https://lolo19920228.github.io/2021/02/19/007-%E5%85%AD%E8%A7%92JS%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tim Chou">
+      <meta itemprop="description" content="菜雞前端與日常">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tim's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          六角JS直播班課前預習筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2021-02-19 15:30:00" itemprop="dateCreated datePublished" datetime="2021-02-19T15:30:00+08:00">2021-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2021-04-19 00:00:39" itemprop="dateModified" datetime="2021-04-19T00:00:39+08:00">2021-04-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FrontEnd/" itemprop="url" rel="index"><span itemprop="name">FrontEnd</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>紀錄六角網頁JS直播班課前預習筆記</p>
+<a id="more"></a>
+<h2 id="let、const、var-介紹"><a href="#let、const、var-介紹" class="headerlink" title="let、const、var 介紹"></a>let、const、var 介紹</h2><ol>
+<li>const比較難修改值</li>
+</ol>
+<h2 id="宣告變數限制"><a href="#宣告變數限制" class="headerlink" title="宣告變數限制"></a>宣告變數限制</h2><ol>
+<li>開頭不能用數字</li>
+<li>不能使用.與-</li>
+<li>不能使用<a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank" rel="noopener">關鍵字</a></li>
+<li>大小寫有分</li>
+<li>盡量語意化</li>
+</ol>
+<h2 id="字串處理食用方法"><a href="#字串處理食用方法" class="headerlink" title="字串處理食用方法"></a>字串處理食用方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查詢字串長度</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="string">"fsadf"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a.length);</span><br><span class="line"><span class="comment">//刪除字串空格</span></span><br><span class="line"><span class="keyword">let</span> yourName = <span class="string">"   Tim"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(yourName.trim());</span><br></pre></td></tr></table></figure>
+
+<h2 id="樣版字面值教學"><a href="#樣版字面值教學" class="headerlink" title="樣版字面值教學"></a>樣版字面值教學</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myName = <span class="string">"Tom"</span>;</span><br><span class="line"><span class="keyword">let</span> content = <span class="string">`大家好我是<span class="subst">$&#123;myName&#125;</span>`</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="數字與字串轉型"><a href="#數字與字串轉型" class="headerlink" title="數字與字串轉型"></a>數字與字串轉型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字串轉數字</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="string">"20"</span>;</span><br><span class="line">age = <span class="built_in">parseInt</span>(age);</span><br><span class="line"><span class="comment">//數字轉字串</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">12</span>;</span><br><span class="line">b = b.toString()</span><br><span class="line"><span class="comment">//轉換進位制</span></span><br><span class="line"><span class="built_in">parseInt</span>(“<span class="number">11</span>”, <span class="number">2</span>); <span class="comment">// 3 2進位制轉10進位制</span></span><br><span class="line"><span class="built_in">parseInt</span>(“<span class="number">77</span>”, <span class="number">8</span>); <span class="comment">// 63 8進位制轉10進位制</span></span><br><span class="line"><span class="built_in">parseInt</span>(“af”, <span class="number">16</span>); <span class="comment">//175 16進位制轉10進位制</span></span><br><span class="line">(<span class="number">152</span>).toString(<span class="number">2</span>) <span class="comment">// “10011000” ; 先用括號將152轉換“包”成一個物件， 或者如下寫法;</span></span><br><span class="line"><span class="number">152.</span>.toString(<span class="number">2</span>) <span class="comment">// 這裡第一個點將152轉換成float型別的小數，第二個點是引出物件方法;</span></span><br><span class="line"><span class="number">152.</span>.toString(<span class="number">16</span>) <span class="comment">// “98” : 十進位制轉16進位制</span></span><br><span class="line"><span class="number">152.</span>.toString(<span class="number">32</span>) <span class="comment">// “4o” ：十提製轉32進位制</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="比較運算子"><a href="#比較運算子" class="headerlink" title="比較運算子"></a>比較運算子</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> != <span class="number">2</span>); <span class="comment">//true,!=為不等於的意思</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> == <span class="number">2</span>); <span class="comment">//false,==為等於的意思</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> == <span class="string">"1"</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> === <span class="string">"1"</span>); <span class="comment">//false,===為嚴謹等於 !==嚴謹不等於</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a ==<span class="number">1</span> &amp;&amp; b==<span class="number">2</span>);<span class="comment">//true,&amp;&amp; 同時滿足條件</span></span><br><span class="line"><span class="built_in">console</span>.log(a ==<span class="number">2</span> &amp;&amp; b==<span class="number">2</span>);<span class="comment">//false,未同時滿足條件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="邏輯運算子"><a href="#邏輯運算子" class="headerlink" title="邏輯運算子"></a>邏輯運算子</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a == <span class="number">1</span> &amp;&amp; b == <span class="number">2</span>);<span class="comment">//true,&amp;&amp; 同時滿足條件</span></span><br><span class="line"><span class="built_in">console</span>.log(a == <span class="number">2</span> &amp;&amp; b == <span class="number">2</span>);<span class="comment">//false,未同時滿足條件</span></span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">let</span> d = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">console</span>.log(c == <span class="number">4</span> || d == <span class="number">4</span>);<span class="comment">//true,\\任一條件達成</span></span><br><span class="line"><span class="built_in">console</span>.log(c == <span class="number">4</span> || d == <span class="number">5</span>);<span class="comment">//false,條件均未達成</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="流程判斷-if、else-if、else"><a href="#流程判斷-if、else-if、else" class="headerlink" title="流程判斷-if、else if、else"></a>流程判斷-if、else if、else</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ex1</span></span><br><span class="line"><span class="comment">//小美在氣溫15度以下才會穿外套出門,今天氣溫14度</span></span><br><span class="line"><span class="keyword">let</span> todayDegrees = <span class="number">14</span>;</span><br><span class="line"><span class="keyword">let</span> isWearJacket = <span class="number">15</span> &gt;= todayDegrees;</span><br><span class="line"><span class="keyword">if</span>(isWearJacket)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"小美穿著外套出門了"</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"小美覺得今天太熱沒穿外套"</span>)</span><br><span class="line">&#125;<span class="comment">//"小美穿著外套出門了"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//ex2</span></span><br><span class="line"><span class="comment">//小明如果錢夠110元就吃牛排</span></span><br><span class="line"><span class="comment">//不但夠但80的話就吃小龍包</span></span><br><span class="line"><span class="comment">//都還是不夠的話就吃自己</span></span><br><span class="line"><span class="keyword">let</span> wallet = <span class="number">79</span>;</span><br><span class="line"><span class="keyword">if</span>(wallet &gt;= <span class="number">110</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"吃牛排囉"</span>)</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(wallet &gt;= <span class="number">80</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"吃小龍包囉"</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"吃自己囉"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//ex3</span></span><br><span class="line"><span class="comment">//男生腰圍超過90過胖</span></span><br><span class="line"><span class="comment">//女生腰圍超過80過胖</span></span><br><span class="line"><span class="keyword">let</span> sex = <span class="string">"woman"</span>;</span><br><span class="line"><span class="keyword">let</span> cm = <span class="number">70</span>;</span><br><span class="line"><span class="keyword">if</span>(sex == <span class="string">"man"</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(cm &gt; <span class="number">90</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"男生體型過胖"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"男生體型正常"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cm &gt; <span class="number">80</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"女生體型過胖"</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"女生體型正常"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"資料錯誤"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="流程圖"><a href="#流程圖" class="headerlink" title="流程圖"></a>流程圖</h2><p>流程圖符號意義(<a href="https://zh.wikipedia.org/wiki/%E6%B5%81%E7%A8%8B%E5%9B%BE" target="_blank" rel="noopener">維基百科</a>）<br>免費繪製流程圖網站(<a href="https://whimsical.com/flowcharts" target="_blank" rel="noopener">whimsical</a>）</p>
+<h2 id="陣列"><a href="#陣列" class="headerlink" title="陣列"></a>陣列</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//陣列寫法</span></span><br><span class="line"><span class="keyword">let</span> colors = [<span class="string">"blue"</span>,<span class="string">"red"</span>,<span class="string">"black"</span>];</span><br><span class="line"><span class="comment">//讀取陣列資料</span></span><br><span class="line"><span class="built_in">console</span>.log(colors[<span class="number">0</span>]);<span class="comment">//"blue"</span></span><br><span class="line"><span class="comment">//賦予新變數陣列裡面的值</span></span><br><span class="line">myLikeColor = colers[<span class="number">1</span>];</span><br><span class="line"><span class="built_in">console</span>.log(myLikeColor);<span class="comment">//"red"</span></span><br><span class="line"><span class="comment">//讀取陣列長度</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.length);<span class="comment">//3</span></span><br><span class="line"><span class="comment">//寫入資料</span></span><br><span class="line">colors[<span class="number">4</span>] = <span class="string">"pink"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["blue","red","black",empty,"pink"]; empty：空白</span></span><br><span class="line">colors.push(<span class="string">"yellow"</span>);<span class="comment">//push：把值塞到最後面</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["blue","red","black",empty,"pink","yellow"];</span></span><br><span class="line">colors.unshift(<span class="string">"white"</span>);<span class="comment">//unshift：把值塞到最前面</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["white","blue","red","black",empty,"pink","yellow"];</span></span><br><span class="line"><span class="comment">//刪除資料</span></span><br><span class="line">colors.pop();<span class="comment">//刪除最後一筆</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["white","blue","red","black",empty,"pink"];</span></span><br><span class="line">colors.shift();<span class="comment">//刪除第一筆</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["blue","red","black",empty,"pink"];</span></span><br><span class="line">colors.splice(<span class="number">3</span>,<span class="number">2</span>);<span class="comment">//從位置3刪除2筆 splice:拼接</span></span><br><span class="line"><span class="built_in">console</span>.log(colors);<span class="comment">//["blue","red","black"];</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="物件"><a href="#物件" class="headerlink" title="物件"></a>物件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//物件寫法(使用大括號和： 不需要分號)</span></span><br><span class="line"><span class="keyword">let</span> home = &#123;</span><br><span class="line">    motherName : <span class="string">"Mary"</span>,</span><br><span class="line">    fatherName : <span class="string">"Tom"</span>,</span><br><span class="line">    isWakeUp : <span class="literal">false</span>,</span><br><span class="line">    dogs : <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//讀取物件資料</span></span><br><span class="line"><span class="built_in">console</span>.log(home.dogs);</span><br><span class="line"><span class="built_in">console</span>.log(home[<span class="string">"dogs"</span>]);</span><br><span class="line"><span class="comment">//賦予新變數為物件裡的值</span></span><br><span class="line"><span class="keyword">let</span> dogsNum = home.dogs;</span><br><span class="line"><span class="comment">//新增物件屬性</span></span><br><span class="line">home.cats = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//修改物件值</span></span><br><span class="line">home.cats += <span class="number">1</span>;</span><br><span class="line"><span class="comment">//刪除物件</span></span><br><span class="line"><span class="keyword">delete</span> home.cats;</span><br></pre></td></tr></table></figure>
+
+<h2 id="陣列-物件混"><a href="#陣列-物件混" class="headerlink" title="陣列.物件混"></a>陣列.物件混</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//寫法</span></span><br><span class="line"><span class="keyword">let</span> home = [</span><br><span class="line">    &#123;</span><br><span class="line">        motherName : <span class="string">"Mary"</span>,</span><br><span class="line">        fatherName : <span class="string">"Tom"</span>,</span><br><span class="line">        isWakeUp : <span class="literal">false</span>,</span><br><span class="line">        dogs : <span class="number">3</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        motherName : <span class="string">"Sherry"</span>,</span><br><span class="line">        fatherName : <span class="string">"Tim"</span>,</span><br><span class="line">        isWakeUp : <span class="literal">false</span>,</span><br><span class="line">        dogs : <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">];</span><br><span class="line"><span class="comment">//讀取</span></span><br><span class="line"><span class="built_in">console</span>.log(home[<span class="number">0</span>].dogs);</span><br></pre></td></tr></table></figure>
+
+<h2 id="函示（需不需要加分號的補充說明）"><a href="#函示（需不需要加分號的補充說明）" class="headerlink" title="函示（需不需要加分號的補充說明）"></a>函示（<a href="https://hackmd.io/@chupai/B1oMsUZEH" target="_blank" rel="noopener">需不需要加分號的補充說明</a>）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//寫法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">morningAction</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"函示執行成功"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//讀取</span></span><br><span class="line">morningAction();</span><br><span class="line"><span class="comment">//相加範例</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add1</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`您加總的數字為<span class="subst">$&#123;num1+num2&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//return1(可中斷程式執行)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add2</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1+num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> total1 = add2(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line"><span class="comment">//return2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add3</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> total2 = num1+num2;</span><br><span class="line">    <span class="keyword">return</span> total2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> total1 = add3(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line"><span class="comment">//補充取餘數</span></span><br><span class="line"><span class="keyword">let</span> a=<span class="number">6</span>%<span class="number">4</span>; <span class="comment">//2</span></span><br><span class="line"><span class="comment">//四捨五入</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="number">23.5556</span>;</span><br><span class="line">num = num.toFixed(<span class="number">2</span>); <span class="comment">//23.56</span></span><br><span class="line"><span class="comment">//全域變數邏輯(若裡面沒有宣告則往外找變數)</span></span><br><span class="line"><span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    count+=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line">test();</span><br><span class="line">test();</span><br><span class="line"><span class="built_in">console</span>.log(count); <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<h2 id="DOM-Domcument-Object-Model"><a href="#DOM-Domcument-Object-Model" class="headerlink" title="DOM(Domcument Object Model)"></a>DOM(Domcument Object Model)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//選取h1</span></span><br><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"h1"</span>); <span class="comment">//el為元素element的縮寫</span></span><br><span class="line"><span class="comment">//textCotent寫入文字資料</span></span><br><span class="line">el.textContent = <span class="string">"Hello World!!"</span>;</span><br><span class="line"><span class="comment">//寫入HTML標籤</span></span><br><span class="line"><span class="keyword">const</span> main = <span class="built_in">document</span>.querySelector(<span class="string">".main"</span>);</span><br><span class="line">main.innerHTML = <span class="string">`&lt;h1 class="header"&gt;標題&lt;/h1&gt;`</span></span><br><span class="line"><span class="comment">//帶入變數</span></span><br><span class="line"><span class="keyword">const</span> list = <span class="built_in">document</span>.querySelector(<span class="string">".list"</span>);</span><br><span class="line"><span class="keyword">let</span> myLink = <span class="string">"https://www.facebook.com/"</span>;</span><br><span class="line">list.innerHTML = <span class="string">`&lt;li&gt;&lt;a href="<span class="subst">$&#123;myLink&#125;</span>"&gt;網址測試&lt;/a&gt;&lt;/li&gt;`</span></span><br><span class="line"><span class="comment">//更改HTML標簽屬性</span></span><br><span class="line"><span class="keyword">const</span> myLink = <span class="built_in">document</span>.querySelector(<span class="string">"a"</span>);</span><br><span class="line">myLink.setAttribute(<span class="string">"href"</span>,<span class="string">"https://www.facebook.com/"</span>);</span><br><span class="line">myLink.setAttribute(<span class="string">"class"</span>,<span class="string">"red"</span>);</span><br><span class="line"><span class="comment">//選取重複多個元素</span></span><br><span class="line"><span class="keyword">const</span> myLinks = <span class="built_in">document</span>.querySelectorAll(<span class="string">"a"</span>);</span><br><span class="line">myLinks[<span class="number">2</span>].setAttribute(<span class="string">"class"</span>,<span class="string">"red"</span>);<span class="comment">//選取第三個物件</span></span><br><span class="line"><span class="comment">//取值方法</span></span><br><span class="line"><span class="keyword">const</span> myLink = <span class="built_in">document</span>.querySelector(<span class="string">"a"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myLink.getAttribute(<span class="string">"href"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(myLink.innerHTML);</span><br><span class="line"><span class="built_in">console</span>.log(myLink.textContent);</span><br><span class="line"><span class="comment">//表單取值 &lt;input type="text" class="txt" value="你好嗎？"&gt;</span></span><br><span class="line"><span class="keyword">const</span> txt = <span class="built_in">document</span>.querySelector(<span class="string">".txt"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(txt.value);</span><br></pre></td></tr></table></figure>
+
+<h2 id="event事件"><a href="#event事件" class="headerlink" title="event事件"></a>event事件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//註冊監聽事件範例</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">".btn"</span>);</span><br><span class="line"><span class="keyword">const</span> tittle = <span class="built_in">document</span>.querySelector(<span class="string">".h1"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(btn);</span><br><span class="line"><span class="built_in">console</span>.log(tittle);</span><br><span class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    tittle.textContent = <span class="string">"按鈕已經被點擊"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//加法器</span></span><br><span class="line">btn2 = <span class="built_in">document</span>.querySelector(<span class="string">".btn2"</span>);</span><br><span class="line">result = <span class="built_in">document</span>.querySelector(<span class="string">".result"</span>);</span><br><span class="line">btn2.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// console.log("test");</span></span><br><span class="line">    num1 = <span class="built_in">parseInt</span>(<span class="built_in">document</span>.querySelector(<span class="string">".num1"</span>).value);</span><br><span class="line">    num2 = <span class="built_in">parseInt</span>(<span class="built_in">document</span>.querySelector(<span class="string">".num2"</span>).value);</span><br><span class="line">    result.textContent = num1+num2;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//event物件-告訴你當下元素資訊</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">".btn"</span>);</span><br><span class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.clientX);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//透過nodeNmae瞭解目前DOM的HTML位置</span></span><br><span class="line"><span class="comment">//&lt;input type="button" value="按鈕" class="btn"&gt;</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">".btn"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(btn.nodeName);<span class="comment">//input</span></span><br><span class="line"><span class="comment">//e.target-瞭解目前所在元素位置</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">".btn"</span>);</span><br><span class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target);<span class="comment">//input .btn</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//e.target搭配nodeName節點，抓到你預期要做的事情</span></span><br><span class="line"><span class="keyword">const</span> list = <span class="built_in">document</span>.querySelector(<span class="string">".list"</span>);</span><br><span class="line">list.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.nodeName);</span><br><span class="line">    <span class="keyword">if</span>(e.e.target.nodeName == <span class="string">"INPUT"</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你點擊倒了按鈕"</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//取消預設發行為</span></span><br><span class="line"><span class="keyword">const</span> myLink = <span class="built_in">document</span>.querySesector(<span class="string">"a"</span>);</span><br><span class="line">myLink.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//forEach寫法</span></span><br><span class="line"><span class="keyword">let</span> data = [<span class="number">30</span>,<span class="number">33</span>,<span class="number">22</span>];</span><br><span class="line">data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);<span class="comment">//30 33 22</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//相加</span></span><br><span class="line"><span class="keyword">let</span> total = <span class="number">0</span>;</span><br><span class="line">data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">    total += item;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(total);</span><br></pre></td></tr></table></figure>
+
+<h2 id="forEach題型功能講解"><a href="#forEach題型功能講解" class="headerlink" title="forEach題型功能講解"></a><a href="https://codepen.io/hexschool/pen/oNYPPPx" target="_blank" rel="noopener">forEach題型功能講解</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如何整合innerHTML資料</span></span><br><span class="line"><span class="keyword">const</span> list = <span class="built_in">document</span>.querySelector(<span class="string">".list"</span>);</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">""</span>;</span><br><span class="line">data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> content = <span class="string">`&lt;li&gt;<span class="subst">$&#123;item.name&#125;</span>，<span class="subst">$&#123;item.Charge&#125;</span>&lt;/li&gt;`</span>;</span><br><span class="line">    str += content;</span><br><span class="line">&#125;);</span><br><span class="line">list.innerHTML = str;</span><br><span class="line"><span class="comment">//搭配網頁初始化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> list = <span class="built_in">document</span>.querySelector(<span class="string">".list"</span>);</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">""</span>;</span><br><span class="line">data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> content = <span class="string">`&lt;li&gt;<span class="subst">$&#123;item.name&#125;</span>，<span class="subst">$&#123;item.Charge&#125;</span>&lt;/li&gt;`</span>;</span><br><span class="line">    str += content;</span><br><span class="line">&#125;);</span><br><span class="line">list.innerHTML = str;</span><br><span class="line">&#125;;</span><br><span class="line">init();</span><br><span class="line"><span class="comment">//免費與投幣式的監聽設計</span></span><br><span class="line"><span class="keyword">const</span> stationFilter = <span class="built_in">document</span>.querySelector(<span class="string">".filter"</span>);</span><br><span class="line">stationFilter.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e.target.value == <span class="literal">undefined</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> str = <span class="string">""</span>;</span><br><span class="line">  data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e.target.value == <span class="string">"全部"</span>)&#123;</span><br><span class="line">      str += <span class="string">`&lt;li&gt;<span class="subst">$&#123;item.name&#125;</span>，<span class="subst">$&#123;item.Charge&#125;</span>&lt;/li&gt;`</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (e.target.value == item.Charge)&#123;</span><br><span class="line">      str+=<span class="string">`&lt;li&gt;<span class="subst">$&#123;item.name&#125;</span>，<span class="subst">$&#123;item.Charge&#125;</span>&lt;/li&gt;`</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  list.innerHTML = str;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//新增邏輯</span></span><br><span class="line"><span class="keyword">const</span> stationName = <span class="built_in">document</span>.querySelector(<span class="string">".stationName"</span>);</span><br><span class="line"><span class="keyword">const</span> stationCharge = <span class="built_in">document</span>.querySelector(<span class="string">".stationCharge"</span>);</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">".btn"</span>);</span><br><span class="line"></span><br><span class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(stationName.value);</span><br><span class="line">  <span class="built_in">console</span>.log(stationCharge.value);</span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  obj.Charge = stationCharge.value;</span><br><span class="line">  obj.name = stationName.value;</span><br><span class="line">  data.push(obj);</span><br><span class="line">  init();</span><br><span class="line">  stationCharge.value =<span class="string">""</span>;</span><br><span class="line">  stationName.value = <span class="string">""</span>;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 表單 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"充電站名稱"</span> <span class="attr">class</span>=<span class="string">"stationName"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"stationCharge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"免費"</span>&gt;</span>免費<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"投幣式"</span>&gt;</span>投幣式<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"儲存"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="網路請求"><a href="#網路請求" class="headerlink" title="網路請求"></a>網路請求</h2><h3 id="輸入一個網址時的先後執行順序"><a href="#輸入一個網址時的先後執行順序" class="headerlink" title="輸入一個網址時的先後執行順序"></a>輸入一個網址時的先後執行順序</h3><ol>
+<li>瀏覽器進行網址DNS解析，並獲得網址對應IP。</li>
+<li>進行TCP三項交握。</li>
+<li>進行SSL握手。</li>
+<li>發出網路請求（request)。</li>
+<li>獲得HTML response，並顯示狀態碼200。</li>
+<li>解析HTML，並顯示於瀏覽器上。</li>
+</ol>
+<h3 id="網頁請求狀態碼"><a href="#網頁請求狀態碼" class="headerlink" title="網頁請求狀態碼"></a><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status" target="_blank" rel="noopener">網頁請求狀態碼</a></h3><h3 id="網路請求方式講解"><a href="#網路請求方式講解" class="headerlink" title="網路請求方式講解"></a>網路請求方式講解</h3><ol>
+<li>GET</li>
+<li>POST（可傳送資料給對方）</li>
+</ol>
+<h3 id="請求資料格式-request-header-Content-Type"><a href="#請求資料格式-request-header-Content-Type" class="headerlink" title="請求資料格式 request header Content-Type"></a>請求資料格式 request header Content-Type</h3><ol>
+<li>application/x-www-form-urlencoded</li>
+<li>application/json</li>
+<li>multipart/form-data(傳送檔案)</li>
+<li>text/plain（記事本格式）</li>
+</ol>
+<h2 id="AJAX-axios套件教學"><a href="#AJAX-axios套件教學" class="headerlink" title="AJAX-axios套件教學"></a><a href="https://github.com/axios/axios" target="_blank" rel="noopener">AJAX-axios套件教學</a></h2><h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CDN --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="嘗試串接外部資料"><a href="#嘗試串接外部資料" class="headerlink" title="嘗試串接外部資料"></a>嘗試串接外部資料</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(response.data);</span><br><span class="line">  <span class="built_in">console</span>.log(response.status);</span><br><span class="line">  <span class="built_in">console</span>.log(response.statusText);</span><br><span class="line">  <span class="built_in">console</span>.log(response.headers);</span><br><span class="line">  <span class="built_in">console</span>.log(response.config);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用GET將外部資料寫到網站上"><a href="#使用GET將外部資料寫到網站上" class="headerlink" title="使用GET將外部資料寫到網站上"></a>使用GET將外部資料寫到網站上</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'https://www.xxx.com'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> ary = response.data;</span><br><span class="line">        <span class="built_in">console</span>.log(ary[<span class="number">0</span>],name);</span><br><span class="line">        <span class="keyword">const</span> title = <span class="built_in">document</span>.querySelector(<span class="string">'.title'</span>);</span><br><span class="line">        title.textContent = ary[<span class="number">0</span>].name;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用POST請求"><a href="#使用POST請求" class="headerlink" title="使用POST請求"></a>使用POST請求</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span>,</span><br><span class="line">    lastName: <span class="string">'Flintstone'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="todolist經點題目介紹"><a href="#todolist經點題目介紹" class="headerlink" title="todolist經點題目介紹"></a><a href="https://codepen.io/hexschool/pen/OJWRqrN" target="_blank" rel="noopener">todolist經點題目介紹</a></h2><h3 id="取值複習-getAttribute"><a href="#取值複習-getAttribute" class="headerlink" title="取值複習 getAttribute"></a>取值複習 getAttribute</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> title = <span class="built_in">document</span>.querySedector(<span class="string">".title"</span>);</span><br><span class="line"></span><br><span class="line">title.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.textContent);</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.getAttribute(<span class="string">"class"</span>));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="範圍內容取值"><a href="#範圍內容取值" class="headerlink" title="範圍內容取值"></a>範圍內容取值</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>標題內容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"檢視"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> title = <span class="built_in">document</span>.querySedector(<span class="string">".title"</span>);</span><br><span class="line"></span><br><span class="line">title.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e.target.nodeName!==<span class="string">"INPUT"</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"有正確點到input"</span>);</span><br><span class="line">&#125;)</span><br><span class="line">title.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e.target.getAttribute(<span class="string">"class"</span>) == <span class="string">"view"</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"有正確點到input2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="data-屬性妙用"><a href="#data-屬性妙用" class="headerlink" title="data-屬性妙用"></a>data-屬性妙用</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"title"</span> <span class="attr">data-</span>自訂名稱=<span class="string">"內容"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>標題內容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"檢視"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/FrontEnd/" rel="tag"># FrontEnd</a>
+              <a href="/tags/liveCourse-JavaScript/" rel="tag"># liveCourse-JavaScript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/21/006-JavaScript%E5%85%A5%E9%96%80%E7%AF%87%E7%AD%86%E8%A8%98/" rel="prev" title="JavaScript入門篇">
+      <i class="fa fa-chevron-left"></i> JavaScript入門篇
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/06/008-%E5%85%AD%E8%A7%92Vue3%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="六角Vue3直播班課前預習筆記（一）">
+      六角Vue3直播班課前預習筆記（一） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let、const、var-介紹"><span class="nav-number">2.</span> <span class="nav-text">let、const、var 介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宣告變數限制"><span class="nav-number">3.</span> <span class="nav-text">宣告變數限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字串處理食用方法"><span class="nav-number">4.</span> <span class="nav-text">字串處理食用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#樣版字面值教學"><span class="nav-number">5.</span> <span class="nav-text">樣版字面值教學</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#數字與字串轉型"><span class="nav-number">6.</span> <span class="nav-text">數字與字串轉型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比較運算子"><span class="nav-number">7.</span> <span class="nav-text">比較運算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#邏輯運算子"><span class="nav-number">8.</span> <span class="nav-text">邏輯運算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程判斷-if、else-if、else"><span class="nav-number">9.</span> <span class="nav-text">流程判斷-if、else if、else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程圖"><span class="nav-number">10.</span> <span class="nav-text">流程圖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#陣列"><span class="nav-number">11.</span> <span class="nav-text">陣列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物件"><span class="nav-number">12.</span> <span class="nav-text">物件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#陣列-物件混"><span class="nav-number">13.</span> <span class="nav-text">陣列.物件混</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函示（需不需要加分號的補充說明）"><span class="nav-number">14.</span> <span class="nav-text">函示（需不需要加分號的補充說明）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-Domcument-Object-Model"><span class="nav-number">15.</span> <span class="nav-text">DOM(Domcument Object Model)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#event事件"><span class="nav-number">16.</span> <span class="nav-text">event事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#forEach"><span class="nav-number">17.</span> <span class="nav-text">forEach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#forEach題型功能講解"><span class="nav-number">18.</span> <span class="nav-text">forEach題型功能講解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#網路請求"><span class="nav-number">19.</span> <span class="nav-text">網路請求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#輸入一個網址時的先後執行順序"><span class="nav-number">19.1.</span> <span class="nav-text">輸入一個網址時的先後執行順序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#網頁請求狀態碼"><span class="nav-number">19.2.</span> <span class="nav-text">網頁請求狀態碼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#網路請求方式講解"><span class="nav-number">19.3.</span> <span class="nav-text">網路請求方式講解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#請求資料格式-request-header-Content-Type"><span class="nav-number">19.4.</span> <span class="nav-text">請求資料格式 request header Content-Type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX-axios套件教學"><span class="nav-number">20.</span> <span class="nav-text">AJAX-axios套件教學</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝"><span class="nav-number">20.1.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嘗試串接外部資料"><span class="nav-number">20.2.</span> <span class="nav-text">嘗試串接外部資料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用GET將外部資料寫到網站上"><span class="nav-number">20.3.</span> <span class="nav-text">使用GET將外部資料寫到網站上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用POST請求"><span class="nav-number">20.4.</span> <span class="nav-text">使用POST請求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todolist經點題目介紹"><span class="nav-number">21.</span> <span class="nav-text">todolist經點題目介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#取值複習-getAttribute"><span class="nav-number">21.1.</span> <span class="nav-text">取值複習 getAttribute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#範圍內容取值"><span class="nav-number">21.2.</span> <span class="nav-text">範圍內容取值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-屬性妙用"><span class="nav-number">21.3.</span> <span class="nav-text">data-屬性妙用</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tim Chou</p>
+  <div class="site-description" itemprop="description">菜雞前端與日常</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">التصنيفات</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">الوسوم</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fas fa-glasses"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tim Chou</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

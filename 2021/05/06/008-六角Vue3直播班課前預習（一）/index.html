@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lolo19920228.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言紀錄六角網頁Vue3直播班課前預習筆記（課前JS必備知識）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="六角Vue3直播班課前預習筆記（一）">
+<meta property="og:url" content="https://lolo19920228.github.io/2021/05/06/008-%E5%85%AD%E8%A7%92Vue3%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="Tim&#39;s Blog">
+<meta property="og:description" content="前言紀錄六角網頁Vue3直播班課前預習筆記（課前JS必備知識）">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-05-06T05:30:00.000Z">
+<meta property="article:modified_time" content="2021-06-23T03:28:33.000Z">
+<meta property="article:author" content="Tim Chou">
+<meta property="article:tag" content="FrontEnd">
+<meta property="article:tag" content="liveCourse-Vue3">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lolo19920228.github.io/2021/05/06/008-%E5%85%AD%E8%A7%92Vue3%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-tw'
+  };
+</script>
+
+  <title>六角Vue3直播班課前預習筆記（一） | Tim's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tim's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tim's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep on going never give up.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="https://lolo19920228.github.io/2021/05/06/008-%E5%85%AD%E8%A7%92Vue3%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tim Chou">
+      <meta itemprop="description" content="菜雞前端與日常">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tim's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          六角Vue3直播班課前預習筆記（一）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2021-05-06 13:30:00" itemprop="dateCreated datePublished" datetime="2021-05-06T13:30:00+08:00">2021-05-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2021-06-23 11:28:33" itemprop="dateModified" datetime="2021-06-23T11:28:33+08:00">2021-06-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FrontEnd/" itemprop="url" rel="index"><span itemprop="name">FrontEnd</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>紀錄六角網頁Vue3直播班課前預習筆記（課前JS必備知識）</p>
+<a id="more"></a>
+<h2 id="課程資源"><a href="#課程資源" class="headerlink" title="課程資源"></a>課程資源</h2><ol>
+<li><a href="https://github.com/hexschool/vue3-starter-files/tree/gh-pages" target="_blank" rel="noopener">練習手冊</a></li>
+<li>Chrome 必裝的 Vue 開發套件<ul>
+<li><a href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg" target="_blank" rel="noopener">Vue Devtools</a></li>
+</ul>
+</li>
+<li>VSCode 相關套件<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank" rel="noopener">Vue Vue 官方提供的 Vue 整合插件</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets" target="_blank" rel="noopener">Vue 3 Snippets</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="JS常見縮寫"><a href="#JS常見縮寫" class="headerlink" title="JS常見縮寫"></a>JS常見縮寫</h2><h3 id="語法糖與新增語法"><a href="#語法糖與新增語法" class="headerlink" title="語法糖與新增語法"></a>語法糖與新增語法</h3><ul>
+<li>語法糖：不會影響運作，邏輯與當前 JS 一致</li>
+<li>新增語法：會影響JS運作</li>
+</ul>
+<h3 id="物件字面值-Object-literals"><a href="#物件字面值-Object-literals" class="headerlink" title="物件字面值 Object literals"></a>物件字面值 Object literals</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//物件內的函示</span></span><br><span class="line"><span class="comment">//console.log(obj.fn1())與console.log(obj.fn2())結果相同</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  myName: <span class="string">'我是物件'</span>,</span><br><span class="line">  fn1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.myName;</span><br><span class="line">  &#125;,</span><br><span class="line">  fn2() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.myName; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//物件內的變數</span></span><br><span class="line"><span class="comment">//物件名字一樣時可直接使用</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name : <span class="string">'小明'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line"><span class="comment">//   person : person</span></span><br><span class="line">person</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="展開"><a href="#展開" class="headerlink" title="展開"></a>展開</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不同陣列合併</span></span><br><span class="line"><span class="keyword">const</span> groupA = [<span class="string">'小明'</span>, <span class="string">'杰倫'</span>, <span class="string">'阿姨'</span>];</span><br><span class="line"><span class="keyword">const</span> groupB = [<span class="string">'老媽'</span>, <span class="string">'老爸'</span>];</span><br><span class="line"><span class="comment">// const groupAll = groupA.concat(groupB);</span></span><br><span class="line"><span class="keyword">const</span> groupAll = [...groupA,...groupB];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 物件擴展</span></span><br><span class="line"><span class="comment">// 新增一個物件包含新方法，同時加入原有的方法</span></span><br><span class="line"><span class="keyword">const</span> methods = &#123;</span><br><span class="line">  fn1() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  fn2() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> newMethods = &#123;</span><br><span class="line">  fn3() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  ...methods</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//轉成純陣列</span></span><br><span class="line"><span class="keyword">const</span> doms = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(doms); <span class="comment">// 請轉為純陣列</span></span><br></pre></td></tr></table></figure>
+<h3 id="預設值"><a href="#預設值" class="headerlink" title="預設值"></a>預設值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b = <span class="number">2</span></span>) </span>&#123; </span><br><span class="line">  <span class="comment">// 請加入預設值避免錯誤</span></span><br><span class="line"><span class="comment">//   if (!b) &#123;b = 2&#125; 傳統手法</span></span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>));</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="解構"><a href="#解構" class="headerlink" title="解構"></a>解構</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取出單一物件值</span></span><br><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">  casper:&#123;</span><br><span class="line">    name:<span class="string">'卡斯伯'</span>,</span><br><span class="line">    like:<span class="string">'鍋燒意麵'</span>,</span><br><span class="line">    price:<span class="number">80</span></span><br><span class="line">  &#125;,</span><br><span class="line">  rey:&#123;</span><br><span class="line">    name:<span class="string">'瑞'</span>,</span><br><span class="line">    like:<span class="string">'炒麵'</span>,</span><br><span class="line">    price:<span class="number">85</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ming:&#123;</span><br><span class="line">    name:<span class="string">'小明'</span>,</span><br><span class="line">    like:<span class="string">'黑胡椒燴飯'</span>,</span><br><span class="line">    price:<span class="number">120</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> &#123; casper &#125; = people;</span><br><span class="line"><span class="comment">//避免物件不存在可以給預設值</span></span><br><span class="line"><span class="keyword">const</span> &#123; casper, joy = &#123;<span class="attr">name</span>:喬依&#125; &#125; = people;</span><br></pre></td></tr></table></figure>
+
+<h2 id="箭頭函示"><a href="#箭頭函示" class="headerlink" title="箭頭函示"></a>箭頭函示</h2><h3 id="箭頭函式的縮寫"><a href="#箭頭函式的縮寫" class="headerlink" title="箭頭函式的縮寫"></a>箭頭函式的縮寫</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];<span class="comment">// 取有餘數的值（單數）</span></span><br><span class="line"><span class="comment">//傳統寫法</span></span><br><span class="line"><span class="comment">// const filterArr = arr.filter(function (item) &#123;</span></span><br><span class="line"><span class="comment">//   return item % 2 ;</span></span><br><span class="line"><span class="comment">// &#125;)</span></span><br><span class="line"><span class="keyword">const</span> filterArr = arr.filter(<span class="function"><span class="params">item</span> =&gt;</span> item % <span class="number">2</span>); </span><br><span class="line"><span class="comment">//箭頭函示會自動帶上return</span></span><br><span class="line"><span class="comment">//參數只有一個的時候可以移除小刮號</span></span><br><span class="line"><span class="built_in">console</span>.log(filterArr);</span><br></pre></td></tr></table></figure>
+<h3 id="綁定的差異"><a href="#綁定的差異" class="headerlink" title="綁定的差異"></a>綁定的差異</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'全域'</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">'小明'</span>,</span><br><span class="line">  callName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1'</span>, <span class="keyword">this</span>.name); <span class="comment">// 1 小明</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'2'</span>, <span class="keyword">this</span>.name); <span class="comment">// 2 全域</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'3'</span>, <span class="keyword">this</span>); <span class="comment">// 3 window</span></span><br><span class="line">    &#125;, <span class="number">10</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">person.callName();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭頭函示沒有自己的this，所以要再往外看一層</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'全域'</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">'小明'</span>,</span><br><span class="line">  callName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1'</span>, <span class="keyword">this</span>.name); <span class="comment">// 1 小明</span></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'2'</span>, <span class="keyword">this</span>.name); <span class="comment">// 2 小明</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'3'</span>, <span class="keyword">this</span>); <span class="comment">// 3 object</span></span><br><span class="line">    &#125;, <span class="number">10</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">person.callName();</span><br></pre></td></tr></table></figure>
+<h3 id="陷阱範例"><a href="#陷阱範例" class="headerlink" title="陷阱範例"></a>陷阱範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EX1</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'全域'</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">'小明'</span>,</span><br><span class="line">  callName: <span class="function"><span class="params">()</span> =&gt;</span> &#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name); <span class="comment">// 請尋找箭頭所在的作用域為何？</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">person.callName(); <span class="comment">//全域</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//EX2</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'全域'</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">'小明'</span>,</span><br><span class="line">  callMe() &#123;</span><br><span class="line">    <span class="keyword">const</span> callName = <span class="function"><span class="params">()</span> =&gt;</span> &#123; </span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.name); <span class="comment">// 請尋找箭頭所在的作用域為何？</span></span><br><span class="line">    &#125;;</span><br><span class="line">    callName();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">person.callMe(); <span class="comment">//小明</span></span><br></pre></td></tr></table></figure>
+<h3 id="實戰運用"><a href="#實戰運用" class="headerlink" title="實戰運用"></a>實戰運用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//未避免this不如預期</span></span><br><span class="line"><span class="comment">// 1.this先指向其它變數</span></span><br><span class="line"><span class="comment">// 2.使用箭頭函示</span></span><br><span class="line"><span class="keyword">var</span> someone = <span class="string">'全域'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSomeone</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.someone);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj4 = &#123;</span><br><span class="line">  someone: <span class="string">'物件 4'</span>,</span><br><span class="line">  fn() &#123;</span><br><span class="line">    <span class="comment">// const vm = this; // vm 在 Vue 中意指 ViewModel</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.someone);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="關鍵點分離實做"><a href="#關鍵點分離實做" class="headerlink" title="關鍵點分離實做"></a>關鍵點分離實做</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// #1 資料、畫面、方法分離</span></span><br><span class="line"><span class="comment">// 畫面 = html</span></span><br><span class="line"><span class="comment">// 資料 = component.data</span></span><br><span class="line"><span class="comment">// 方法 = 物件內的其它函式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// #2 元件結構</span></span><br><span class="line"><span class="comment">// 1. 資料</span></span><br><span class="line"><span class="comment">// 2. 方法、觸發器</span></span><br><span class="line"><span class="comment">// 3. 生命週期（初始化）</span></span><br><span class="line"><span class="keyword">const</span> component = &#123;</span><br><span class="line">  data: [ <span class="comment">// 資料</span></span><br><span class="line">    <span class="string">'這是第一句話'</span>,</span><br><span class="line">    <span class="string">'這是第二句話'</span>,</span><br><span class="line">    <span class="string">'這是第三句話'</span></span><br><span class="line">  ],</span><br><span class="line">  removeData(id) &#123;</span><br><span class="line">    <span class="keyword">this</span>.data.splice(id, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">this</span>.render();</span><br><span class="line">  &#125;,</span><br><span class="line">  render() &#123; <span class="comment">// 渲染方法</span></span><br><span class="line">    <span class="keyword">const</span> list = <span class="built_in">document</span>.querySelector(<span class="string">'.component ul'</span>);</span><br><span class="line">    <span class="keyword">let</span> content = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">this</span>.data.forEach(<span class="function">(<span class="params">item, i</span>) =&gt;</span> &#123;</span><br><span class="line">      content = <span class="string">`<span class="subst">$&#123;content&#125;</span>&lt;li&gt;<span class="subst">$&#123;item&#125;</span> &lt;button type="button" class="btn" data-id="<span class="subst">$&#123;i&#125;</span>"&gt;移除&lt;/button&gt;&lt;/li&gt;`</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 縮寫優化</span></span><br><span class="line">    <span class="comment">// const content = component.data.map(item =&gt; `&lt;li&gt;$&#123;item&#125;&lt;/li&gt;`).join('');</span></span><br><span class="line">    list.innerHTML = content;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加入監聽</span></span><br><span class="line">    <span class="keyword">const</span> btns = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.btn'</span>);</span><br><span class="line">    btns.forEach(<span class="function"><span class="params">btn</span> =&gt;</span> btn.addEventListener(<span class="string">'click'</span>, (e)=&gt; &#123;</span><br><span class="line">      <span class="comment">// #2 重點，移除項目是先移除資料，而不是直接移除 DOM</span></span><br><span class="line">      <span class="comment">// 如果要進行 AJAX 或更複雜行為，不會因為 DOM 與資料混合而難以運作</span></span><br><span class="line">      <span class="keyword">const</span> id = e.target.dataset.id;</span><br><span class="line">      <span class="keyword">this</span>.removeData(id)</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125;,</span><br><span class="line">  init() &#123;</span><br><span class="line">    <span class="keyword">this</span>.render();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">component.init();</span><br></pre></td></tr></table></figure>
+
+<h2 id="物件、函示、陣列傳參考特性"><a href="#物件、函示、陣列傳參考特性" class="headerlink" title="物件、函示、陣列傳參考特性"></a><a href="https://ithelp.ithome.com.tw/articles/10221506" target="_blank" rel="noopener">物件、函示、陣列傳參考特性</a></h2><h3 id="避免影響原有物件的解決方案"><a href="#避免影響原有物件的解決方案" class="headerlink" title="避免影響原有物件的解決方案"></a>避免影響原有物件的解決方案</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">'小明'</span>,</span><br><span class="line">  obj: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 潛層拷貝（第二層內容仍會指向原有參考）</span></span><br><span class="line"><span class="keyword">const</span> person2 = <span class="built_in">Object</span>.assign(&#123;&#125;.person);</span><br><span class="line"><span class="keyword">const</span> person3 = &#123;</span><br><span class="line">  ...person</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 深層拷貝（物件轉為字串再轉為物件）</span></span><br><span class="line"><span class="keyword">const</span> person4 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(person));</span><br></pre></td></tr></table></figure>
+
+<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><h3 id="使用axios取得遠端資料"><a href="#使用axios取得遠端資料" class="headerlink" title="使用axios取得遠端資料"></a>使用axios取得遠端資料</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://github.com/axios/axios</span></span><br><span class="line">axios.get(<span class="string">'https://randomuser.me/api/gg'</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.data.results);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.response);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="esModule"><a href="#esModule" class="headerlink" title="esModule"></a>esModule</h2><h3 id="預設與具名"><a href="#預設與具名" class="headerlink" title="預設與具名"></a>預設與具名</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//預設匯出</span></span><br><span class="line"><span class="comment">// 常見的匯出方式，通常用於匯出物件，在 Vue 開發中可用來匯出元件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//具名匯出</span></span><br><span class="line"><span class="comment">// 可用於匯出已定義的變數、物件、函式，專案開發中通常用於 “方法匯出”</span></span><br><span class="line"><span class="comment">// 第三方的框架、函式、套件很常使用具名定義 “方法”</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"module"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="comment">//預設匯入</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> 自訂名稱 <span class="keyword">from</span> <span class="string">'檔案位置'</span>;</span></span><br><span class="line"><span class="actionscript"><span class="comment">//具名匯入(單一)</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; a, b &#125; <span class="keyword">from</span> <span class="string">'檔案位置'</span>;</span></span><br><span class="line"><span class="actionscript"><span class="comment">//具名匯入（全部，但不建議）</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> * <span class="keyword">as</span> 自訂名稱 all <span class="keyword">from</span> <span class="string">'檔案位置'</span>;</span></span><br><span class="line"><span class="actionscript"><span class="comment">//SideEffect</span></span></span><br><span class="line"><span class="actionscript"><span class="meta"><span class="meta-keyword">import</span> '檔案位置';</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="API串接說明"><a href="#API串接說明" class="headerlink" title="API串接說明"></a>API串接說明</h2><h3 id="相關說明文件"><a href="#相關說明文件" class="headerlink" title="相關說明文件"></a>相關說明文件</h3><ol>
+<li><a href="https://vue3-course-api.hexschool.io/" target="_blank" rel="noopener">課程API申請</a></li>
+<li><a href="https://github.com/hexschool/vue3-course-api-wiki/wiki/" target="_blank" rel="noopener">課程API文件</a></li>
+<li><a href="https://github.com/axios/axios" target="_blank" rel="noopener">Axios文件</a>（路徑：<a href="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js）" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js）</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="noopener">MDN Cookie 文件</a></li>
+</ol>
+<h3 id="登入驗證與儲存cookie"><a href="#登入驗證與儲存cookie" class="headerlink" title="登入驗證與儲存cookie"></a>登入驗證與儲存cookie</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ＃1 依API文件進行宣告</span></span><br><span class="line">  <span class="keyword">const</span> username = emailInput.value;</span><br><span class="line">  <span class="keyword">const</span> password = pwInput.value;</span><br><span class="line">  <span class="keyword">const</span> user = &#123;</span><br><span class="line">    username,</span><br><span class="line">    password</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ＃2 發送API至遠方登入（處儲存Token至Cookie）</span></span><br><span class="line">  axios.post(<span class="string">`<span class="subst">$&#123;url&#125;</span>/admin/signin`</span> user)</span><br><span class="line">    .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">      <span class="keyword">const</span> token = res.data.token;</span><br><span class="line">      <span class="keyword">const</span> expired = res.data.expired;</span><br><span class="line">      <span class="built_in">document</span>.cookie = <span class="string">`hexToken=<span class="subst">$&#123;token&#125;</span>; expires=<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>(expired)&#125;</span>`</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="取得cookie裡的Token保持登入"><a href="#取得cookie裡的Token保持登入" class="headerlink" title="取得cookie裡的Token保持登入"></a>取得cookie裡的Token保持登入</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取得token</span></span><br><span class="line"><span class="keyword">const</span> token token = <span class="built_in">document</span>.cookie.replace(<span class="regexp">/(?:(?:^|.*;\s*)hexToken\s*\=\s*([^;]*).*$)|^.*$/</span>, <span class="string">"$1"</span>);</span><br><span class="line"><span class="comment">//將token加入表頭</span></span><br><span class="line">axois.defaults.headers.common[<span class="string">'Authorization'</span>] = token;</span><br><span class="line"><span class="comment">//確認是否登入</span></span><br><span class="line">axios.post(<span class="string">`<span class="subst">$&#123;url&#125;</span>/api/user/check`</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/FrontEnd/" rel="tag"># FrontEnd</a>
+              <a href="/tags/liveCourse-Vue3/" rel="tag"># liveCourse-Vue3</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/19/007-%E5%85%AD%E8%A7%92JS%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92/" rel="prev" title="六角JS直播班課前預習筆記">
+      <i class="fa fa-chevron-left"></i> 六角JS直播班課前預習筆記
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/23/009-%E5%85%AD%E8%A7%92Vue3%E7%9B%B4%E6%92%AD%E7%8F%AD%E8%AA%B2%E5%89%8D%E9%A0%90%E7%BF%92%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="next" title="六角Vue3直播班課前預習筆記（二）">
+      六角Vue3直播班課前預習筆記（二） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課程資源"><span class="nav-number">2.</span> <span class="nav-text">課程資源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS常見縮寫"><span class="nav-number">3.</span> <span class="nav-text">JS常見縮寫</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#語法糖與新增語法"><span class="nav-number">3.1.</span> <span class="nav-text">語法糖與新增語法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物件字面值-Object-literals"><span class="nav-number">3.2.</span> <span class="nav-text">物件字面值 Object literals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#展開"><span class="nav-number">3.3.</span> <span class="nav-text">展開</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#預設值"><span class="nav-number">3.4.</span> <span class="nav-text">預設值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解構"><span class="nav-number">3.5.</span> <span class="nav-text">解構</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箭頭函示"><span class="nav-number">4.</span> <span class="nav-text">箭頭函示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#箭頭函式的縮寫"><span class="nav-number">4.1.</span> <span class="nav-text">箭頭函式的縮寫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#綁定的差異"><span class="nav-number">4.2.</span> <span class="nav-text">綁定的差異</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#陷阱範例"><span class="nav-number">4.3.</span> <span class="nav-text">陷阱範例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#實戰運用"><span class="nav-number">4.4.</span> <span class="nav-text">實戰運用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#關鍵點分離實做"><span class="nav-number">4.5.</span> <span class="nav-text">關鍵點分離實做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物件、函示、陣列傳參考特性"><span class="nav-number">5.</span> <span class="nav-text">物件、函示、陣列傳參考特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#避免影響原有物件的解決方案"><span class="nav-number">5.1.</span> <span class="nav-text">避免影響原有物件的解決方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">6.</span> <span class="nav-text">promise</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用axios取得遠端資料"><span class="nav-number">6.1.</span> <span class="nav-text">使用axios取得遠端資料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#esModule"><span class="nav-number">7.</span> <span class="nav-text">esModule</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#預設與具名"><span class="nav-number">7.1.</span> <span class="nav-text">預設與具名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API串接說明"><span class="nav-number">8.</span> <span class="nav-text">API串接說明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相關說明文件"><span class="nav-number">8.1.</span> <span class="nav-text">相關說明文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登入驗證與儲存cookie"><span class="nav-number">8.2.</span> <span class="nav-text">登入驗證與儲存cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取得cookie裡的Token保持登入"><span class="nav-number">8.3.</span> <span class="nav-text">取得cookie裡的Token保持登入</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tim Chou</p>
+  <div class="site-description" itemprop="description">菜雞前端與日常</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">التصنيفات</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">الوسوم</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fas fa-glasses"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tim Chou</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

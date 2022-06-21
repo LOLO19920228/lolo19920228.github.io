@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lolo19920228.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言紀錄JQuery的筆記。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初階JQuery筆記">
+<meta property="og:url" content="https://lolo19920228.github.io/2020/07/21/003-%E5%88%9D%E9%9A%8EJQuery%E7%AD%86%E8%A8%98/index.html">
+<meta property="og:site_name" content="Tim&#39;s Blog">
+<meta property="og:description" content="前言紀錄JQuery的筆記。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-07-21T08:30:00.000Z">
+<meta property="article:modified_time" content="2020-09-08T14:43:19.000Z">
+<meta property="article:author" content="Tim Chou">
+<meta property="article:tag" content="FrontEnd">
+<meta property="article:tag" content="JQuery">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lolo19920228.github.io/2020/07/21/003-%E5%88%9D%E9%9A%8EJQuery%E7%AD%86%E8%A8%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-tw'
+  };
+</script>
+
+  <title>初階JQuery筆記 | Tim's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tim's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tim's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep on going never give up.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="https://lolo19920228.github.io/2020/07/21/003-%E5%88%9D%E9%9A%8EJQuery%E7%AD%86%E8%A8%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tim Chou">
+      <meta itemprop="description" content="菜雞前端與日常">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tim's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初階JQuery筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2020-07-21 16:30:00" itemprop="dateCreated datePublished" datetime="2020-07-21T16:30:00+08:00">2020-07-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2020-09-08 22:43:19" itemprop="dateModified" datetime="2020-09-08T22:43:19+08:00">2020-09-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FrontEnd/" itemprop="url" rel="index"><span itemprop="name">FrontEnd</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>紀錄JQuery的筆記。</p>
+<a id="more"></a>
+<h2 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h2><h3 id="VsCode的安裝套件"><a href="#VsCode的安裝套件" class="headerlink" title="VsCode的安裝套件"></a>VsCode的安裝套件</h3><ul>
+<li><strong>jQuery Code Snippets</strong><br>jQuery熱鍵，提升編寫效率(<a href="https://github.com/kspearrin/Visual-Studio-jQuery-Code-Snippets/wiki/Snippet-Listing" target="_blank" rel="noopener">熱鍵清單</a>)</li>
+</ul>
+<h3 id="jQuery-document-ready"><a href="#jQuery-document-ready" class="headerlink" title="jQuery document ready"></a>jQuery document ready</h3><p>要用JavaScript操縱網頁的DOM元素時，必須等網頁完全載入後才可安全地進行操作，而要確保網頁載入，可使用jQuery的$( document ).ready()。<br>把Javascript程式碼寫在$( document ).ready()中即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">// 在這撰寫javascript程式碼</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>下面的簡短寫法效果同$( document ).ready()。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 在這撰寫javascript程式碼</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>純Javascript的寫法。<br>注意，window.onload和$( document ).ready()的觸發順序仍有差異。<br>window.onload會等網頁的全部內容，包括圖片，CSS及<code>&lt;iframe&gt;</code>等外部內容載入後才會觸發，但$(document).ready()在Document Object Model (DOM) 載入後就會觸發，所以順序上$(document).ready()會比window.onload先執行。<br>window.onload是JavaScript的原生事件，而$(document).ready()是jQuery的事件（其實是透過監聽JavaScript的DOMContentLoaded事件來實現）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 在這撰寫javascript程式碼</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>或是把程式碼寫在<body>…</body>標籤的尾端。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 一些HTML --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line">  </span><br><span class="line"><span class="actionscript">  <span class="comment">// 在這撰寫javascript程式碼</span></span></span><br><span class="line"></span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常用參考-JQuery辭典"><a href="#常用參考-JQuery辭典" class="headerlink" title="常用參考(JQuery辭典)"></a>常用參考(<a href="https://oscarotero.com/jquery/" target="_blank" rel="noopener">JQuery辭典</a>)</h2><h3 id="選擇器"><a href="#選擇器" class="headerlink" title="選擇器"></a>選擇器</h3><ul>
+<li><strong>$(this)</strong><br>對自己做操作</li>
+<li><strong>$(‘.class’)</strong><br>選取class</li>
+<li><strong>parent()</strong><br>選取父階層元素</li>
+<li><strong>siblings()</strong><br>選取同層元素</li>
+<li><strong>find(‘’)</strong><br>尋找子元素內容</li>
+</ul>
+<h3 id="操控"><a href="#操控" class="headerlink" title="操控"></a>操控</h3><ul>
+<li><strong>html(‘<code>&lt;p&gt;</code>這是範例<code>&lt;/p&gt;</code>‘)</strong><br>在js中載入html內容</li>
+<li><strong>text(‘文字內容’)</strong><br>在已經有的html標籤中載入文字內容</li>
+<li><strong>remove(‘’)</strong><br>移除網頁標籤</li>
+</ul>
+<h3 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h3><ul>
+<li><strong>css(‘屬性’,’值’)</strong><br>增加css設定</li>
+<li><strong>toggleClass()</strong><br>增加減少屬性</li>
+<li><strong>attr()</strong><br>增加或修改html標籤屬性</li>
+</ul>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><ul>
+<li><strong>resize()</strong><br>偵測螢幕縮放事件</li>
+<li><strong>scroll()</strong><br>偵測螢幕上下滾動事件</li>
+<li><strong>preventDefault()</strong><br>取消默認行為</li>
+</ul>
+<h3 id="特效"><a href="#特效" class="headerlink" title="特效"></a>特效</h3><ul>
+<li><strong>toggle()</strong><br>使元素在hide()和show()之間切換</li>
+<li><strong>slideToggle()</strong><br>使元素滑入滑出</li>
+<li><strong>fadeToggle()</strong><br>使元素淡入淡出</li>
+<li><strong>delay()</strong><br>延遲</li>
+<li><strong>stop()</strong><br>暫停目前動畫</li>
+</ul>
+<h2 id="on-和click-的區別"><a href="#on-和click-的區別" class="headerlink" title="on()和click()的區別"></a>on()和click()的區別</h2><p>二者在綁定靜態控件時沒有區別，但是如果面對動態產生的控件，只有on() 能成功的綁定到動態控件中。</p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'body'</span>).on(<span class="string">'click'</span>, <span class="string">'.selector'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.preventDefault();</span><br><span class="line">  <span class="comment">//要執行的程式碼</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h2><ul>
+<li><a href="https://animate.style/" target="_blank" rel="noopener">Animate.css</a></li>
+<li><a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank" rel="noopener">lightbox</a></li>
+<li><a href="https://swiperjs.com/" target="_blank" rel="noopener">Swiper輪播效果</a> <a href="https://swiperjs.com/demos/" target="_blank" rel="noopener">（Demo）</a></li>
+<li><a href="https://matthew.wagerfield.com/parallax/" target="_blank" rel="noopener">parallax滾動式差</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/FrontEnd/" rel="tag"># FrontEnd</a>
+              <a href="/tags/JQuery/" rel="tag"># JQuery</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/20/002-%E5%88%9D%E9%9A%8EhtmlCss%E7%AD%86%E8%A8%98/" rel="prev" title="初階htmlCss筆記">
+      <i class="fa fa-chevron-left"></i> 初階htmlCss筆記
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/19/004-%E5%88%9D%E9%9A%8ERWD%E6%89%8B%E6%A9%9F%E7%B6%B2%E9%A0%81%E7%89%88%E8%A8%AD%E8%A8%88%E7%AD%86%E8%A8%98/" rel="next" title="初階RWD手機網頁版設計筆記">
+      初階RWD手機網頁版設計筆記 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筆記"><span class="nav-number">2.</span> <span class="nav-text">筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VsCode的安裝套件"><span class="nav-number">2.1.</span> <span class="nav-text">VsCode的安裝套件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-document-ready"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery document ready</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用參考-JQuery辭典"><span class="nav-number">3.</span> <span class="nav-text">常用參考(JQuery辭典)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#選擇器"><span class="nav-number">3.1.</span> <span class="nav-text">選擇器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操控"><span class="nav-number">3.2.</span> <span class="nav-text">操控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#屬性"><span class="nav-number">3.3.</span> <span class="nav-text">屬性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">3.4.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特效"><span class="nav-number">3.5.</span> <span class="nav-text">特效</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#on-和click-的區別"><span class="nav-number">4.</span> <span class="nav-text">on()和click()的區別</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#範例"><span class="nav-number">4.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方插件"><span class="nav-number">5.</span> <span class="nav-text">第三方插件</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tim Chou</p>
+  <div class="site-description" itemprop="description">菜雞前端與日常</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">التصنيفات</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">الوسوم</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fas fa-glasses"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tim Chou</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
