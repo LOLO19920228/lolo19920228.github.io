@@ -6,7 +6,7 @@
   <link href="https://lolo19920228.github.io/atom.xml" rel="self"/>
   
   <link href="https://lolo19920228.github.io/"/>
-  <updated>2022-06-24T08:10:50.267Z</updated>
+  <updated>2022-07-04T13:15:19.901Z</updated>
   <id>https://lolo19920228.github.io/</id>
   
   <author>
@@ -17,25 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://lolo19920228.github.io/2022/06/24/018-test/"/>
-    <id>https://lolo19920228.github.io/2022/06/24/018-test/</id>
-    <published>2022-06-24T02:30:00.000Z</published>
-    <updated>2022-06-24T08:10:50.267Z</updated>
+    <title>htmlCss復健</title>
+    <link href="https://lolo19920228.github.io/2022/07/04/018-htmlCss%E5%BE%A9%E5%81%A5/"/>
+    <id>https://lolo19920228.github.io/2022/07/04/018-htmlCss%E5%BE%A9%E5%81%A5/</id>
+    <published>2022-07-04T01:00:00.000Z</published>
+    <updated>2022-07-04T13:15:19.901Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>紀錄六角Node.js課程筆記</p><a id="more"></a><h2 id="require、module-exports-模組設計"><a href="#require、module-exports-模組設計" class="headerlink" title="require、module exports 模組設計"></a>require、module exports 模組設計</h2><pre><code class="js"><span class="comment">// data.js</span><span class="keyword">let</span> data = <span class="number">2</span>;<span class="built_in">module</span>.exports = {  content: data,  title: <span class="string">'title'</span>};exports.ddd = <span class="number">2</span>;<span class="comment">// app.js</span><span class="keyword">let</span> content = <span class="built_in">require</span>(<span class="string">'./data'</span>);<span class="built_in">console</span>.log(content);<span class="built_in">console</span>.log(content.ddd); <span class="comment">// 會被module.exports覆蓋掉</span></code></pre><h2 id="createServer（初次練習）"><a href="#createServer（初次練習）" class="headerlink" title="createServer（初次練習）"></a>createServer（初次練習）</h2><pre><code class="js"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>{  response.writeHead(<span class="number">200</span>,{<span class="string">"Cintent-Type"</span>:<span class="string">"text/plain"</span>});  response.write(<span class="string">'hello!!'</span>);  response.end();}).listen(<span class="number">8080</span>);</code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;紀錄六角Node.js課程筆記&lt;/p&gt;</summary>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快一年沒碰前端了<br>報名了六角切版班復健兼學習新知<br>這篇主要是放一些我快忘記的知識或快捷</p><a id="more"></a><h2 id="vsCode快捷與技巧"><a href="#vsCode快捷與技巧" class="headerlink" title="vsCode快捷與技巧"></a>vsCode快捷與技巧</h2><h3 id="熱鍵"><a href="#熱鍵" class="headerlink" title="熱鍵"></a>熱鍵</h3><ul><li><strong>左右切換分頁</strong><br>⌘+⌥+←(→)</li><li><strong>直達分頁(需安裝Atom keymap插件)</strong><br>⌘+1(2or3or4…)</li><li><strong>搜尋專案檔案</strong><br>⌘+p<br>檔案名稱後面加＠可以繼續搜尋檔案內文字<br>＠後面加文字可以搜尋變數<br>:後面加數字可以跳到指定行數</li><li><strong>跳當排文字最後面</strong><br>⌘+→</li><li><strong>選取整行文字</strong><br>⌘+l</li><li><strong>搜尋指令庫</strong><br>⌘+shift+p</li><li><strong>縮放頁面文字大小</strong><br>⌘++(-)</li><li><strong>在 JS 片段使用 emmet(加入vsCode設定)</strong><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"emmet.includeLanguages"</span>: &#123;</span><br><span class="line">    <span class="string">"javascript"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">    <span class="string">"vue-html"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"plaintext"</span>: <span class="string">"jade"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"emmet.triggerExpansionOnTab"</span>: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure></li><li><strong>選取相同文字</strong><br>⌘+d</li><li><strong>將縮排改2space(主流)</strong></li></ul><ol><li>將縮排轉為定位點</li><li>空格改為2</li><li>將縮排轉為space</li></ol><ul><li><strong>格式化文件(安裝套件Prettier)</strong><br>⌘+shift+f</li></ul>]]></content>
     
     
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;快一年沒碰前端了&lt;br&gt;報名了六角切版班復健兼學習新知&lt;br&gt;這篇主要是放一些我快忘記的知識或快捷&lt;/p&gt;</summary>
     
-    <category term="BackEnd" scheme="https://lolo19920228.github.io/categories/BackEnd/"/>
     
     
-    <category term="Node.js" scheme="https://lolo19920228.github.io/tags/Node-js/"/>
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
-    <category term="BackEnd" scheme="https://lolo19920228.github.io/tags/BackEnd/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
+    
+    <category term="htmlCss" scheme="https://lolo19920228.github.io/tags/htmlCss/"/>
     
   </entry>
   
@@ -148,9 +148,9 @@
     <category term="Ｈexo" scheme="https://lolo19920228.github.io/categories/Hexo/"/>
     
     
-    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
-    
     <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
     
   </entry>
   
@@ -401,9 +401,9 @@
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
     
-    <category term="htmlCss" scheme="https://lolo19920228.github.io/tags/htmlCss/"/>
-    
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
+    
+    <category term="htmlCss" scheme="https://lolo19920228.github.io/tags/htmlCss/"/>
     
   </entry>
   
@@ -424,9 +424,9 @@
     <category term="Ｈexo" scheme="https://lolo19920228.github.io/categories/Hexo/"/>
     
     
-    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
-    
     <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
     
   </entry>
   
