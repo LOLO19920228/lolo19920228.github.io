@@ -6,7 +6,7 @@
   <link href="https://lolo19920228.github.io/atom.xml" rel="self"/>
   
   <link href="https://lolo19920228.github.io/"/>
-  <updated>2022-07-04T13:15:19.901Z</updated>
+  <updated>2024-06-11T02:11:03.495Z</updated>
   <id>https://lolo19920228.github.io/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>htmlCss復健</title>
-    <link href="https://lolo19920228.github.io/2022/07/04/018-htmlCss%E5%BE%A9%E5%81%A5/"/>
-    <id>https://lolo19920228.github.io/2022/07/04/018-htmlCss%E5%BE%A9%E5%81%A5/</id>
-    <published>2022-07-04T01:00:00.000Z</published>
-    <updated>2022-07-04T13:15:19.901Z</updated>
+    <link href="https://lolo19920228.github.io/2024/06/11/018-htmlCss%E5%BE%A9%E5%81%A5/"/>
+    <id>https://lolo19920228.github.io/2024/06/11/018-htmlCss%E5%BE%A9%E5%81%A5/</id>
+    <published>2024-06-11T01:00:00.000Z</published>
+    <updated>2024-06-11T02:11:03.495Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快一年沒碰前端了<br>報名了六角切版班復健兼學習新知<br>這篇主要是放一些我快忘記的知識或快捷</p><a id="more"></a><h2 id="vsCode快捷與技巧"><a href="#vsCode快捷與技巧" class="headerlink" title="vsCode快捷與技巧"></a>vsCode快捷與技巧</h2><h3 id="熱鍵"><a href="#熱鍵" class="headerlink" title="熱鍵"></a>熱鍵</h3><ul><li><strong>左右切換分頁</strong><br>⌘+⌥+←(→)</li><li><strong>直達分頁(需安裝Atom keymap插件)</strong><br>⌘+1(2or3or4…)</li><li><strong>搜尋專案檔案</strong><br>⌘+p<br>檔案名稱後面加＠可以繼續搜尋檔案內文字<br>＠後面加文字可以搜尋變數<br>:後面加數字可以跳到指定行數</li><li><strong>跳當排文字最後面</strong><br>⌘+→</li><li><strong>選取整行文字</strong><br>⌘+l</li><li><strong>搜尋指令庫</strong><br>⌘+shift+p</li><li><strong>縮放頁面文字大小</strong><br>⌘++(-)</li><li><strong>在 JS 片段使用 emmet(加入vsCode設定)</strong><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"emmet.includeLanguages"</span>: &#123;</span><br><span class="line">    <span class="string">"javascript"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">    <span class="string">"vue-html"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"plaintext"</span>: <span class="string">"jade"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"emmet.triggerExpansionOnTab"</span>: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure></li><li><strong>選取相同文字</strong><br>⌘+d</li><li><strong>將縮排改2space(主流)</strong></li></ul><ol><li>將縮排轉為定位點</li><li>空格改為2</li><li>將縮排轉為space</li></ol><ul><li><strong>格式化文件(安裝套件Prettier)</strong><br>⌘+shift+f</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快一年沒碰前端了<br>報名了六角切版班復健兼學習新知<br>這篇主要是放一些我快忘記的知識或快捷</p><a id="more"></a><h2 id="vsCode快捷與技巧"><a href="#vsCode快捷與技巧" class="headerlink" title="vsCode快捷與技巧"></a>vsCode快捷與技巧</h2><h3 id="熱鍵"><a href="#熱鍵" class="headerlink" title="熱鍵"></a>熱鍵</h3><ul><li><strong>左右切換分頁</strong><br>⌘+⌥+←(→)</li><li><strong>直達分頁(需安裝Atom keymap插件)</strong><br>⌘+1(2or3or4…)</li><li><strong>搜尋專案檔案</strong><br>⌘+p<br>檔案名稱後面加＠可以繼續搜尋檔案內文字<br>＠後面加文字可以搜尋變數<br>:後面加數字可以跳到指定行數</li><li><strong>跳當排文字最後面</strong><br>⌘+→</li><li><strong>選取整行文字</strong><br>⌘+l</li><li><strong>搜尋指令庫</strong><br>⌘+shift+p</li><li><strong>縮放頁面文字大小</strong><br>⌘++(-)</li><li><strong>在 JS 片段使用 emmet(加入vsCode設定)</strong><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"emmet.includeLanguages"</span>: &#123;</span><br><span class="line">    <span class="string">"javascript"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">    <span class="string">"vue-html"</span>: <span class="string">"html"</span>,</span><br><span class="line">    <span class="string">"plaintext"</span>: <span class="string">"jade"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"emmet.triggerExpansionOnTab"</span>: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure></li><li><strong>選取相同文字</strong><br>⌘+d</li><li><strong>將縮排改2space(主流)</strong></li></ul><ol><li>將縮排轉為定位點</li><li>空格改為2</li><li>將縮排轉為space</li></ol><ul><li><strong>格式化文件(安裝套件Prettier)</strong><br>⌘+shift+f</li></ul><h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><ul><li><strong>a標籤</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- target="_blank"跳出新分頁 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"連結提示"</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2></li><li><strong>擬態選擇器</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 滑鼠經過的樣式 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 滑鼠按住的樣式 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><strong>文字排版</strong><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 文字前方空格 */</span></span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">text-indent</span>:<span class="number">32px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 文字底線 */</span></span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;快一年沒碰前端了&lt;br&gt;報名了六角切版班復健兼學習新知&lt;br&gt;這篇主要是放一些我快忘記的知識或快捷&lt;/p&gt;</summary>
@@ -33,9 +33,9 @@
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
     
-    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
-    
     <category term="htmlCss" scheme="https://lolo19920228.github.io/tags/htmlCss/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
     
   </entry>
   
@@ -148,9 +148,9 @@
     <category term="Ｈexo" scheme="https://lolo19920228.github.io/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
-    
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
+    
+    <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -401,9 +401,9 @@
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
     
-    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
-    
     <category term="htmlCss" scheme="https://lolo19920228.github.io/tags/htmlCss/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
     
   </entry>
   
@@ -424,9 +424,9 @@
     <category term="Ｈexo" scheme="https://lolo19920228.github.io/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
-    
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
+    
+    <category term="Hexo" scheme="https://lolo19920228.github.io/tags/Hexo/"/>
     
   </entry>
   
