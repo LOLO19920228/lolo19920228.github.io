@@ -6,7 +6,7 @@
   <link href="https://lolo19920228.github.io/atom.xml" rel="self"/>
   
   <link href="https://lolo19920228.github.io/"/>
-  <updated>2024-06-19T15:23:02.513Z</updated>
+  <updated>2024-06-28T08:23:59.890Z</updated>
   <id>https://lolo19920228.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初剪影片的學習過程</title>
+    <link href="https://lolo19920228.github.io/2024/06/28/019-%E5%88%9D%E5%89%AA%E5%BD%B1%E7%89%87%E7%9A%84%E5%AD%B8%E7%BF%92%E9%81%8E%E7%A8%8B/"/>
+    <id>https://lolo19920228.github.io/2024/06/28/019-%E5%88%9D%E5%89%AA%E5%BD%B1%E7%89%87%E7%9A%84%E5%AD%B8%E7%BF%92%E9%81%8E%E7%A8%8B/</id>
+    <published>2024-06-28T01:00:00.000Z</published>
+    <updated>2024-06-28T08:23:59.890Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原本只用靜態記錄兒子發現好像有些不夠<br>想學一些些剪片來做動態的紀錄<br>希望跟前端交叉學習也讓自己不會覺得太過乏味</p><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;原本只用靜態記錄兒子發現好像有些不夠&lt;br&gt;想學一些些剪片來做動態的紀錄&lt;br&gt;希望跟前端交叉學習也讓自己不會覺得太過乏味&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="photography" scheme="https://lolo19920228.github.io/categories/photography/"/>
+    
+    
+    <category term="FinalCutPro" scheme="https://lolo19920228.github.io/tags/FinalCutPro/"/>
+    
+  </entry>
   
   <entry>
     <title>htmlCss復健</title>
@@ -332,9 +353,9 @@
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
     
-    <category term="Bootstrap4" scheme="https://lolo19920228.github.io/tags/Bootstrap4/"/>
-    
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
+    
+    <category term="Bootstrap4" scheme="https://lolo19920228.github.io/tags/Bootstrap4/"/>
     
   </entry>
   
@@ -355,9 +376,9 @@
     <category term="FrontEnd" scheme="https://lolo19920228.github.io/categories/FrontEnd/"/>
     
     
-    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
-    
     <category term="RWD" scheme="https://lolo19920228.github.io/tags/RWD/"/>
+    
+    <category term="FrontEnd" scheme="https://lolo19920228.github.io/tags/FrontEnd/"/>
     
   </entry>
   
